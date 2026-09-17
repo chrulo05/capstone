@@ -3,39 +3,90 @@
   <head>
     <title>Capstone Website</title>
     <link type="image/png" sizes="96x96" rel="icon" href="images/icons8-electric-96.png">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
-
-  <h1>Smart Load Shedding Controller for Microgrids</h1>
-  <h2>Capstone Design Team 5</h2>
-  <h3>About Our Project</h3>
-  <p>The goal of this project is to design and build a smart load shedding power system for microgrids. In a microgrid, a small power system is used to supply power to a local area. Under certain conditions, the amount of power being used can exceed the amount provided by the supply. When this happens, the system may become unstable or lose power entirely.</p>
-  <p>Our system aims to prevent this by intelligently turning off lower priority loads when enough power is not present. Higher priority loads will remain powered as long as possible. Once sufficient power becomes available again, the system will reconnect the lower priority loads, providing them with power again.</p>
-  <p>This prototype will monitor power production and the usage of each load. The user will be able to select load priority given their specific needs. The system also includes a simple interface so that the user can view the current status of the load shedding system. The primary goals of the project are to produce a fast, reliable, price efficient controller.</p>
-  <div class="image-row">
-    <img src="images/MicrogridExample.png" alt = "Microgrid Example Image" style="width:464px;height:332px;">
-    <img src="images/MicrogridExample2.png" alt = "Microgrid Example Image 2" style="width:464px;height:332px;">
-  </div>
-  <h3>Meet the Team</h3>
-  <h4>Matthew Bray</h4>
-  <img src="images/MatthewHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>I am a senior in eletrical engineering at Auburn University. I currently work in the IT department at Auburn University.</p>
-  <h4>Enrique Gutierrez </h4>
-  <img src="images/EnriqueHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>I am in my senior year of electrical engineering. I plan to get a job in designing schematics for power systems, circuit boards, layouts, and technical drawings.</p>
-  <h4>Carson Rouleau</h4>
-  <img src="images/CarsonHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>Hi, I am a senior in Computer Engineering with a minor in Statistics. I don't have any job preferences at the moment but I specialize in software, hardware, and data science.</p>
-  <h4>Kayne Scheuerman</h4>
-  <img src="images/KayneHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>I am a senior in electrical engineering. I plan to work in renewable energy after graduation.</p>
-  <h4>Cruz Smith</h4>
-  <img src="images/CruzHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>I am a senior electrical engineering major. I am specializing in power and hope to work for a power generation plant.</p>
-  <h4>Jake Wakefield</h4>
-  <img src="images/JakeHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
-  <p>Jake Wakefield is an electrical engineering senior who is looking to work in nuclear power after graduation.</p>
-  
-
-</body>
+    <h1>Smart Load Shedding Controller for Microgrids</h1>
+    <h2>Capstone Design Team 5</h2>
+    <div class="button-row">
+      <button type = "button" class = "nav-button active", data-section = "project"><b>About Our Project</b></button>
+      <button type = "button" class = "nav-button", data-section = "team"><b>Meet the Team</b></button>
+      <button type = "button" class = "nav-button", data-section = "timeline"><b>Project Timeline</b></button>
+    </div>
+    <section id = "project" class = "content-section active">
+      <h3>About Our Project</h3>
+      <p>The goal of this project is to design and build a smart load shedding power system for microgrids. In a microgrid, a small power system is used to supply power to a local area. Under certain conditions, the amount of power being used can exceed the amount provided by the supply. When this happens, the system may become unstable or lose power entirely.</p>
+      <p>Our system aims to prevent this by intelligently turning off lower priority loads when enough power is not present. Higher priority loads will remain powered as long as possible. Once sufficient power becomes available again, the system will reconnect the lower priority loads, providing them with power again.</p>
+      <p>This prototype will monitor power production and the usage of each load. The user will be able to select load priority given their specific needs. The system also includes a simple interface so that the user can view the current status of the load shedding system. The primary goals of the project are to produce a fast, reliable, price efficient controller.</p>
+      <div class="image-row">
+        <img src="images/MicrogridExample.png" alt = "Microgrid Example Image" style="width:464px;height:332px;">
+        <img src="images/MicrogridExample2.png" alt = "Microgrid Example Image 2" style="width:464px;height:332px;">
+      </div>
+    </section>
+    <section id = "team" class = "content-section">
+      <h3>Meet the Team</h3>
+      <h4>Matthew Bray</h4>
+      <img src="images/MatthewHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>I am a senior in eletrical engineering at Auburn University. I currently work in the IT department at Auburn University.</p>
+      <h4>Enrique Gutierrez </h4>
+      <img src="images/EnriqueHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>I am in my senior year of electrical engineering. I plan to get a job in designing schematics for power systems, circuit boards, layouts, and technical drawings.</p>
+      <h4>Carson Rouleau</h4>
+      <img src="images/CarsonHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>Hi, I am a senior in Computer Engineering with a minor in Statistics. I don't have any job preferences at the moment but I specialize in software, hardware, and data science.</p>
+      <h4>Kayne Scheuerman</h4>
+      <img src="images/KayneHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>I am a senior in electrical engineering. I plan to work in renewable energy after graduation.</p>
+      <h4>Cruz Smith</h4>
+      <img src="images/CruzHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>I am a senior electrical engineering major. I am specializing in power and hope to work for a power generation plant.</p>
+      <h4>Jake Wakefield</h4>
+      <img src="images/JakeHeadshot.jpeg" alt = "profile picture" style="width:300px;height:300px;">
+      <p>Jake Wakefield is an electrical engineering senior who is looking to work in nuclear power after graduation.</p>
+    </section>
+    <section id = "timeline" class = "content-section">
+      <h3>Project Timeline</h3>
+      <h4>September 1st, 2026</h4>
+      <p>We made progress on writing our CDP for the load shedding device for local microgrids. The website was published along with our headshots and bios. Started to form a schedule around when everyone can meet . </p>
+      <h4>September 10th, 2026</h4>
+      <p>A two load proof of concept would be a good start for our project.</p>
+      <p>Measurable requirements:</p>
+      <p>- System operates at 24 V DC source </p>
+      <p>- System controls 4-6 independent loads </p>
+      <p>- User can assign priority to each load </p>
+      <p>- System monitors source voltage and current </p>
+      <p>- System monitors current consumed by each load </p>
+      <p>- System automatically disconnects lower priority loads when power is insufficient </p>
+      <p>- System automatically restores loads when adequate power becomes available </p>
+      <p>- Higher priority loads shall be retained before lower priority loads </p>
+      <p>- Load state changes shall be indicated on the user interface </p>
+      <p>- System includes a physical emergency disconnect</p>
+      <p>- Controller prevents rapid switching caused by small power fluctuations </p>
+      <p>- Controller electronics operate from power derived from 24 V source </p>
+      <p>- Prototype remains within capstone budget </p>
+      <p> </p>
+      <p>6 representative loads (all fall within 24V requirement): </p>
+      <p>1) Brushless PC fan - Represents ventilation, 2) LED light - Represents lighting, 3) PTC heating element - Represents space heating, water heating, and cooking appliances, 4) Submersible pump -  Represents well water pump and agricultural uses, 5) Piezo buzzer -  Represents communications and radio, 6) Peltier cooler - Represents refrigeration</p>
+      <p>Two potential ways to demonstrate: </p>
+      <p>1) Vary available power via potentiometer, 2) Vary requested power from loads </p>
+      <p>A decision to add an MPPT (maximum power point tracking) to the front end of our system was made, at the suggestion of Dr. Geiger. </p>
+      <p>Website with a good overview of MPPT's: https://www.unboundsolar.com/solar-information/mppt-article#how-many-mppts-do-you-need-dual-mppt-triple-mppt </p>
+      <h4>September 15th, 2026</h4>
+      <p>We started to look at components and their prices.</p>
+      <p>Arduino Mega 2560: https://a.co/d/07ClmSB7 </p>
+      <p>DC supply -> buck-boost converter with duty ratio to simulate a changing voltage output from panel -> MPPT converts extra voltage into extra current -> monitor current to determine what loads to run. Need current meter somewhere </p>
+      <p>DC power supplies: https://a.co/d/0agCUX6S, https://a.co/d/0fz6EUjc </p>
+      <p>PC fan – 12 V, 330mA: https://a.co/d/02zIeUsZ </p>
+      <p>Heating element – 12 V, 4.2A to 416mA: https://a.co/d/0h6GTBjI </p>
+      <p>LED light strips – 12 V, 666mA: https://a.co/d/0itltvtM </p>
+      <p>Submersible pump 12 V, 750mA: https://a.co/d/0gA2A0rV </p>
+      <p>Piezo buzzer - 12 V, 10mA: https://a.co/d/0eSi3YmR </p>
+      <p>Peltier cooler - 5V, 2A: https://a.co/d/07HdkRYw </p>
+      <p>Power MOSFETs: https://a.co/d/05REQTxE </p>
+      <p>Current sensors: https://a.co/d/0g06oCtw </p>
+      <p>Fan and pump are inductive loads -> needs flyback diode </p>
+    </section>
+    <script src="script.js"></script>
+  </body>
 </html>

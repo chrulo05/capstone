@@ -1,0 +1,37 @@
+/* Places the navigation buttons next to each other. */
+.button-row {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+/* Basic appearance of all three buttons. */
+.nav-button {
+  padding: 10px 20px;
+  background-color: white;
+  border: 1px solid black;
+  font-size: 20px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+/* Prevents doubled borders between neighboring buttons. */
+.nav-button + .nav-button {
+  border-left: none;
+}
+
+/* Makes the selected button bold and underlined. */
+.nav-button.active {
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* Hide every section by default. */
+.content-section {
+  display: none;
+}
+
+/* Show only the selected section. */
+.content-section.active {
+  display: block;
+}
