@@ -23,6 +23,9 @@
         <img src="images/MicrogridExample.png" alt = "Microgrid Example Image" style="width:464px;height:332px;">
         <img src="images/MicrogridExample2.png" alt = "Microgrid Example Image 2" style="width:464px;height:332px;">
       </div>
+      <h4>Block Diagram</h4>
+      <p>This is an example of how our power system will be structured.</p>
+      <img src="images/BlockDiagram2.png" alt = "Microgrid Block Diagram" style="width:421px;height:399px;">
     </section>
     <section id = "team" class = "content-section">
       <h3>Meet the Team</h3>
@@ -47,6 +50,11 @@
     </section>
     <section id = "timeline" class = "content-section">
       <h3>Project Timeline</h3>
+      <h4>Work Breakdown Structure and Gantt Chart</h4>
+      <div class="image-row">
+        <img src="images/Capstone WBS.png" alt = "Work Breakdown Structure" style="width:480px;height:360px;">
+        <img src="images/Capstone Gantt Chart.png" alt = "Gantt Chart" style="width:642px;height:206px;">
+      </div>
       <h4>September 1st, 2026</h4>
       <p>We made progress on writing our CDP for the load shedding device for local microgrids. The website was published along with our headshots and bios. Started to form a schedule around when everyone can meet . </p>
       <h4>September 10th, 2026</h4>
@@ -86,6 +94,28 @@
       <p>Power MOSFETs: https://a.co/d/05REQTxE </p>
       <p>Current sensors: https://a.co/d/0g06oCtw </p>
       <p>Fan and pump are inductive loads -> needs flyback diode </p>
+      <h4>September 22nd, 2026</h4>
+      <p>- A decision was made to add an additional killswitch, with one immediately after the power supply and one before the 12 V bus. </p>
+      <p>- A finalized block diagram was created for the project overview. </p>
+      <p>- Added flyback protection to block diagram. </p>
+      <p>- Built and simulated circuit with resistive load, shown in the first figure </p>
+      <p>- Built and simulated circuit with inductive load, including flyback diode protection, shown in the second figure </p>
+      <div class="image-row">
+        <img src="images/Figure1_9-22-26.png" alt = "Figure 1" style="width:483px;height:255px;">
+        <img src="images/Figure2_9-22-26.png" alt = "Figure 2" style="width:483px;height:255px;">
+      </div>
+      <h4>September 30th, 2026</h4>
+      <p>Equation used to estimate the output voltage of a solar panel based on ambient temperature. IN CELCIUS 
+      <p>V_adjusted = V_at25 × [1 + (Temp_coefficient_of_panel / 100) × (Temp_of_cell - 25)]</p>
+      <p>We want to represent from 21.1 to 7.2 degrees Celsius (average temps for auburn in march)</p>
+      <p>V_at25=30 v, Temp_coefficient_of_panel=0.27%, Temp_of_cell[7.2, 21.1]</p>
+      <p>V_adjusted[30.316, 31.442]</p>
+      <img src="images/Figure1_9-30-26.png" alt = "Figure 1" style="width:483px;height:255px;">
+      <p>The figure above shows the two load design circuit built in LTspice. The two separate pulses trigger at different times to show how each load is completely independent of the other, with current flowing in load 1 from 0 to 2 seconds, and current flowing in load 2 from 1 to 3 seconds. The flyback diode in the inductive load allows current to transfer back, giving it a safe path when the MOSFET turns off. The current measured in the diode can be seen in the figure below, showing the sharp 1 A spike flowing back safely when the MOSFET turns off at 3 seconds.</p>
+      <p>In the LTspice simulation, a IRFZ44N MOSFET is used as a placeholder, as it does not have the exact MOSFET we plan to use, which is the IRLZ44N.</p>
+      <img src="images/Figure2_9-30-26.png" alt = "Figure 1" style="width:279px;height:255px;">
+      <p>How will the Arduino detect that the source has reached its available power limit? Monitor source voltage and current, then when the CC region is met, the voltage collapses and the Arduino sheds a load.</p>
+      <p>In order to prevent rapid load switching when near the threshold caused by small voltage fluctuations, the Arduino will use hysteresis and a time delay. A load will only be shed after the source voltage stays below a threshold for a specified time delay and it will not be restored until the voltage rises above a higher threshold. </p>
     </section>
     <script src="script.js"></script>
   </body>
