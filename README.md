@@ -1,6 +1,6 @@
 View the website: chrulo05.github.io/capstone/
 
-Updated as of 9/17/26
+Updated as of 9/30/26
 
 Contains project name, group number, project description, project timeline, and an introduction to the team members with a headshot and bio. The buttons at the top of the website help navigate the website.
 
