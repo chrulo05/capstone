@@ -35,3 +35,41 @@
 .content-section.active {
   display: block;
 }
+
+.team-grid {
+  display: grid;
+
+  /* Three equal columns like the reference image. */
+  grid-template-columns: repeat(3, 1fr);
+
+  /* Space between the rows and columns. */
+  gap: 80px 60px;
+
+  margin-top: 30px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 300px;
+  height: 300px;
+
+  /* Crops each image without stretching it. */
+  object-fit: cover;
+
+  /* Centers the image within its grid column. */
+  display: block;
+  margin: 0 auto;
+}
+
+.team-member h4 {
+  margin: 15px 0 8px;
+}
+
+.team-member p {
+  margin: 0 auto;
+  max-width: 300px;
+  text-align: left;
+}
